@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>chatterbox</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <div id="main">
+      <h1>chatterbox</h1>
+    </div>
+    <!-- 이름 입력창, 메시지 입력창, 그리고 submit 버튼 -->
+    <div id="forms">
+      <label>name</label>
+      <input id="nameInput">
+      
+      <br>
+
+      <label>text</label>
+      <input id="textInput">
+      
+      <button id="submitButton" value="submit">submit</button>
+      <button id="deleteButton" value="delete">delete</button>
+
+      <div>
+        <label for="rooms">choose a room</label>
+      <select id="rlist">
+        <!-- option 들을 dynamic 하게 추가해주자  -->
+        <!-- <option value="audi">Audi</option> -->
+      </select>
+
+      </div>
+      
+      </div>
+
+    <!-- #chats 엘리먼트의 id는 바꾸지 마세요 -->
+    <div id="chats">
+      <!-- 자유롭게 HTML을 작성하세요 -->
+    </div>
+
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
