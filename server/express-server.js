@@ -1,5 +1,3 @@
-// server refactoring with express
-
 const express = require('express')
 const app = express();
 const PORT = process.env.NODE_ENV === 'production' ? 3001: 3002 
@@ -19,17 +17,21 @@ app.use(bodyParser.json());
 app.use(cors());
 app.options('*', cors());
 
+let container = {
+    "results": []
+}
 
 // router section 
 app.get('/messages',(req,res)=>{
-    res.send("Hello world")
-})
-// router.post('/messages',(req,res)=>{
-//     // do something
-// })
+    res.send(JSON.stringify(container));
+});
+app.post('/messages',(req,res)=>{
+    container.results.push(req.body);
+    res.send(JSON.stringify(req.body));
+});
 
 app.listen(PORT,()=>{
    console.log(`server listen on ${PORT}`)
-})
+});
 
 

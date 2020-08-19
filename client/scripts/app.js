@@ -1,6 +1,6 @@
 // eslint-disable-next-line
 const app = {
-  server: 'http://127.0.0.1:8080/messages',
+  server: 'http://127.0.0.1:3002/messages',
   // send method 가 존재 
   // 나머지 method 들도 app 안에 존재해야 한다
   init: function() {
